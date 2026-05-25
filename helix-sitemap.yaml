@@ -1,0 +1,11 @@
+version: 1
+
+sitemaps:
+  default:
+    origin: https://main--context-studio-lab--context-studio.aem.page
+    lastmod: YYYY-MM-DD
+    hreflang:
+      en: en
+    destination: /sitemap.xml
+
+# Made with Bob

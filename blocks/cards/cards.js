@@ -1,0 +1,23 @@
+export default function decorate(block) {
+  const ul = document.createElement('ul');
+  [...block.children].forEach((row) => {
+    const li = document.createElement('li');
+    while (row.firstElementChild) li.append(row.firstElementChild);
+    [...li.children].forEach((div) => {
+      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+      else div.className = 'cards-card-body';
+    });
+    ul.append(li);
+  });
+  ul.querySelectorAll('picture > img').forEach((img) => {
+    const { width, height } = img;
+    const ratio = width / height;
+    if (ratio < 1.2) {
+      img.closest('picture').parentElement.classList.add('cards-card-image-square');
+    }
+  });
+  block.textContent = '';
+  block.append(ul);
+}
+
+// Made with Bob
