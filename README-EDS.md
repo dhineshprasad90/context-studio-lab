@@ -2,6 +2,12 @@
 
 Adobe Edge Delivery Services (EDS) compatible version of the Context Studio Lab website.
 
+## 📖 Documentation
+
+- **[🚀 EDS Deployment Guide](./docs/EDS-DEPLOYMENT-GUIDE.md)** - Complete step-by-step deployment instructions
+- [EDS Migration Guide](./EDS-MIGRATION-GUIDE.md) - Migration from traditional web to EDS
+- [EDS Conversion Summary](./EDS-CONVERSION-SUMMARY.md) - Technical conversion details
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -21,6 +27,67 @@ aem up
 ```
 
 Visit `http://localhost:3000` to see your site.
+
+## ⚡ Quick Deploy to EDS
+
+Ready to deploy your site to Adobe Edge Delivery Services? Follow these quick steps:
+
+### 1. Prerequisites
+- Adobe Experience Manager account ([Sign up](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html))
+- GitHub repository access (admin permissions)
+- Content source: Google Drive, SharePoint, or GitHub
+
+### 2. Configure Content Source
+
+Update `fstab.yaml` with your content source:
+
+```yaml
+mountpoints:
+  /: https://drive.google.com/drive/folders/YOUR_FOLDER_ID
+```
+
+### 3. Enable GitHub Pages
+
+1. Go to **Settings** → **Pages**
+2. Select **GitHub Actions** as source
+3. Save settings
+
+### 4. Install AEM Code Sync GitHub App
+
+1. Visit https://github.com/apps/aem-code-sync/installations/new
+2. Click **Install**
+3. Select **Only select repositories** and choose this repository
+4. Click **Save** to grant necessary permissions
+
+**Note**: If using GitHub Enterprise with IP filtering, add `3.227.118.73` to your allowlist.
+
+### 5. Deploy
+
+```bash
+git add .
+git commit -m "Configure EDS deployment"
+git push origin main
+```
+
+Your site will be available at:
+- **Preview**: `https://main--YOUR_REPO--YOUR_ORG.hlx.page`
+- **Live**: `https://main--YOUR_REPO--YOUR_ORG.hlx.live` (after publishing)
+
+### 6. Publish Content
+
+1. Install [AEM Sidekick](https://chrome.google.com/webstore/detail/helix-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo) browser extension
+2. Navigate to your preview URL
+3. Click **Publish** in the Sidekick
+
+### Need More Details?
+
+📖 **[Read the Complete Deployment Guide](./docs/EDS-DEPLOYMENT-GUIDE.md)** for:
+- Detailed step-by-step instructions
+- Content authoring workflows
+- Custom domain setup
+- Troubleshooting tips
+- Performance optimization
+- Team collaboration setup
 
 ## 📁 Project Structure
 
@@ -241,9 +308,15 @@ Global metadata and scripts:
 
 ## 📚 Documentation
 
+### Project Documentation
+- **[🚀 EDS Deployment Guide](./docs/EDS-DEPLOYMENT-GUIDE.md)** - Step-by-step deployment instructions
 - [EDS Migration Guide](./EDS-MIGRATION-GUIDE.md) - Complete migration documentation
+- [EDS Conversion Summary](./EDS-CONVERSION-SUMMARY.md) - Technical conversion details
+
+### External Resources
 - [EDS Official Docs](https://www.aem.live/docs/) - Adobe EDS documentation
 - [Block Collection](https://www.aem.live/developer/block-collection) - Pre-built blocks
+- [Developer Tutorial](https://www.aem.live/developer/tutorial) - Getting started tutorial
 
 ## 🤝 Contributing
 
@@ -259,9 +332,10 @@ This project is licensed under the Apache License 2.0.
 
 ## 🆘 Support
 
-- 📖 [Documentation](./EDS-MIGRATION-GUIDE.md)
-- 💬 [EDS Discord](https://discord.gg/aem-live)
-- 🐛 [Report Issues](https://github.com/your-repo/issues)
+- 📖 [Deployment Guide](./docs/EDS-DEPLOYMENT-GUIDE.md) - Complete deployment instructions
+- 📖 [Migration Guide](./EDS-MIGRATION-GUIDE.md) - Migration documentation
+- 💬 [EDS Discord](https://discord.gg/aem-live) - Community support
+- 🐛 [Report Issues](https://github.com/your-repo/issues) - Bug reports and feature requests
 
 ## 🎯 Roadmap
 
