@@ -470,6 +470,24 @@ export function decorateButtons(element) {
 }
 
 /**
+ * Decorates icons referencing an external SVG resource.
+ * @param {Element} element container element
+ */
+export function decorateIcons(element) {
+  element.querySelectorAll('span.icon').forEach((span) => {
+    const iconName = Array.from(span.classList)
+      .find((c) => c.startsWith('icon-'))
+      .substring(5);
+    const img = document.createElement('img');
+    img.dataset.iconName = iconName;
+    img.src = `/icons/${iconName}.svg`;
+    img.loading = 'lazy';
+    img.alt = iconName;
+    span.append(img);
+  });
+}
+
+/**
  * Load LCP block and/or wait for LCP in default content.
  */
 export async function waitForLCP(lcpBlocks) {
