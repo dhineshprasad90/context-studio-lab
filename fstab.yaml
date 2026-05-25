@@ -1,5 +1,4 @@
 mountpoints:
-  /:
-    url: "https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xwalk/main"
-    type: "markup"
-    suffix: ".html"
+  /: https://github.com/dhineshprasad90/context-studio-lab/tree/main
+
+# Made with Bob
