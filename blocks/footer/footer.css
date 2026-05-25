@@ -1,0 +1,81 @@
+footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+footer .footer-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer .footer-brand .brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer .footer-tagline {
+  color: var(--gray-light);
+}
+
+footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+footer .footer-column h4 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+footer .footer-column a {
+  color: var(--gray-light);
+  transition: color var(--transition-fast);
+}
+
+footer .footer-column a:hover {
+  color: var(--white);
+}
+
+footer .footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--gray-light);
+}
+
+@media (width <= 900px) {
+  footer .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  footer .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 600px) {
+  footer .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Made with Bob */

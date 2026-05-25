@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Context Studio Lab - Advanced EDS Live Editing, Block Generation, and Orchestration Platform">
+    <meta name="keywords" content="EDS, Adobe Edge Delivery Services, Live Editing, Block Generation, Orchestration">
+    <title>Context Studio Lab | EDS Development Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⚡</span>
+                <span class="brand-name">Context Studio Lab</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#docs" class="nav-link">Documentation</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Context Studio Lab</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Advanced EDS Development Platform with Live Editing, Autonomous Block Generation, and Intelligent Orchestration
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value"><500ms</span>
+                        <span class="stat-label">Build Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">85%+</span>
+                        <span class="stat-label">Autonomous</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value"><1s</span>
+                        <span class="stat-label">HMR Latency</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#features" class="btn btn-primary">Explore Features</a>
+                    <a href="#docs" class="btn btn-secondary">View Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Capabilities</h2>
+                <p class="section-subtitle">Enterprise-grade tools for modern EDS development</p>
+            </div>
+            <div class="features-grid">
+                <!-- Live Editing -->
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🔥</div>
+                    <h3 class="feature-title">Live Editing System</h3>
+                    <p class="feature-description">
+                        Real-time code editing with hot module replacement. Sub-second latency from edit to preview with 100% state preservation.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Incremental builds <500ms</li>
+                        <li>WebSocket-based HMR</li>
+                        <li>State preservation during updates</li>
+                        <li>Vite-powered development server</li>
+                    </ul>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+
+                <!-- Block Generation -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">Autonomous Block Generation</h3>
+                    <p class="feature-description">
+                        AI-powered orchestration that automatically generates deployable EDS blocks from WKND components with minimal human intervention.
+                    </p>
+                    <ul class="feature-list">
+                        <li>85%+ autonomous completion</li>
+                        <li>WKND component mapping</li>
+                        <li>XWalk boilerplate integration</li>
+                        <li>Multi-layer validation</li>
+                    </ul>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+
+                <!-- Orchestration -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">Intelligent Orchestration</h3>
+                    <p class="feature-description">
+                        Coordinate Context Studio, GitHub, XWalk, and AEM WKND components seamlessly with automatic prerequisite discovery and configuration.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Automatic dependency resolution</li>
+                        <li>GitHub integration & PR automation</li>
+                        <li>CI/CD pipeline configuration</li>
+                        <li>State management & recovery</li>
+                    </ul>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">System Architecture</h2>
+                <p class="section-subtitle">Built on modern web technologies for maximum performance</p>
+            </div>
+            <div class="architecture-content">
+                <div class="architecture-diagram">
+                    <div class="arch-layer" data-aos="fade-right">
+                        <div class="layer-number">1</div>
+                        <div class="layer-content">
+                            <h4>Developer Interface</h4>
+                            <p>VS Code Extension, Browser DevTools</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer" data-aos="fade-right" data-aos-delay="100">
+                        <div class="layer-number">2</div>
+                        <div class="layer-content">
+                            <h4>File Watcher Service</h4>
+                            <p>Chokidar-based change detection</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer" data-aos="fade-right" data-aos-delay="200">
+                        <div class="layer-number">3</div>
+                        <div class="layer-content">
+                            <h4>Build Pipeline</h4>
+                            <p>Vite + esbuild incremental builds</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer" data-aos="fade-right" data-aos-delay="300">
+                        <div class="layer-number">4</div>
+                        <div class="layer-content">
+                            <h4>Development Server</h4>
+                            <p>Vite Dev Server with middleware</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer" data-aos="fade-right" data-aos-delay="400">
+                        <div class="layer-number">5</div>
+                        <div class="layer-content">
+                            <h4>WebSocket Layer</h4>
+                            <p>Real-time bidirectional communication</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="architecture-stats">
+                    <div class="stat-card" data-aos="zoom-in">
+                        <h3>Performance Targets</h3>
+                        <ul>
+                            <li><strong><500ms</strong> Incremental build time</li>
+                            <li><strong><1s</strong> Edit to preview latency</li>
+                            <li><strong>100%</strong> State preservation</li>
+                            <li><strong><2s</strong> Error recovery time</li>
+                        </ul>
+                    </div>
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li><strong>Vite 5.0</strong> Development server</li>
+                            <li><strong>esbuild 0.19</strong> Build tool</li>
+                            <li><strong>Chokidar 3.5</strong> File watcher</li>
+                            <li><strong>WebSocket</strong> Real-time updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="section-subtitle">Experience the power of Context Studio Lab</p>
+            </div>
+            <div class="demo-content">
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                        <p>Interactive Demo Coming Soon</p>
+                    </div>
+                </div>
+                <div class="demo-features">
+                    <div class="demo-feature" data-aos="fade-left">
+                        <div class="demo-icon">⚡</div>
+                        <div class="demo-text">
+                            <h4>Lightning Fast HMR</h4>
+                            <p>Watch changes appear instantly in your browser without losing state</p>
+                        </div>
+                    </div>
+                    <div class="demo-feature" data-aos="fade-left" data-aos-delay="100">
+                        <div class="demo-icon">🎯</div>
+                        <div class="demo-text">
+                            <h4>Autonomous Generation</h4>
+                            <p>Generate complete EDS blocks from WKND components automatically</p>
+                        </div>
+                    </div>
+                    <div class="demo-feature" data-aos="fade-left" data-aos-delay="200">
+                        <div class="demo-icon">🔄</div>
+                        <div class="demo-text">
+                            <h4>Seamless Integration</h4>
+                            <p>GitHub, Context Studio, and EDS working together harmoniously</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation</h2>
+                <p class="section-subtitle">Comprehensive guides and technical specifications</p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card" data-aos="flip-left">
+                    <div class="doc-icon">📘</div>
+                    <h3>Live Editing Architecture</h3>
+                    <p>Complete system architecture for real-time code editing with live preview capabilities.</p>
+                    <a href="docs/eds-live-editing-architecture.md" class="doc-link">Read Documentation →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="doc-icon">📗</div>
+                    <h3>Block Generation Plan</h3>
+                    <p>Autonomous AI-powered orchestration system for EDS block generation.</p>
+                    <a href="docs/eds-block-generation-orchestration-plan.md" class="doc-link">Read Documentation →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="doc-icon">📙</div>
+                    <h3>Functional Requirements</h3>
+                    <p>Detailed functional requirements and acceptance criteria.</p>
+                    <a href="docs/functional-requirements.md" class="doc-link">Read Documentation →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="doc-icon">📕</div>
+                    <h3>Non-Functional Requirements</h3>
+                    <p>Quality attributes, performance targets, and system constraints.</p>
+                    <a href="docs/non-functional-requirements.md" class="doc-link">Read Documentation →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">⚡</span>
+                    <span class="brand-name">Context Studio Lab</span>
+                    <p class="footer-tagline">Advanced EDS Development Platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#architecture">Architecture</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#docs">Documentation</a></li>
+                            <li><a href="docs/eds-live-editing-architecture.md">Live Editing</a></li>
+                            <li><a href="docs/eds-block-generation-orchestration-plan.md">Block Generation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Technology</h4>
+                        <ul>
+                            <li><a href="#">Vite</a></li>
+                            <li><a href="#">esbuild</a></li>
+                            <li><a href="#">Adobe EDS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Context Studio Lab. Built with ⚡ by IBM Bob.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

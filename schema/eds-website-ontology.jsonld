@@ -1,0 +1,581 @@
+{
+  "@context": {
+    "eds": "http://example.org/eds#",
+    "schema": "http://schema.org/",
+    "id": "@id",
+    "type": "@type",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "path": "eds:path",
+    "fileType": "eds:fileType",
+    "purpose": "eds:purpose",
+    "features": "eds:features",
+    "attributes": "eds:attributes",
+    "dependencies": {
+      "@id": "eds:dependencies",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "eds:implements",
+      "@type": "@id"
+    },
+    "uses": {
+      "@id": "eds:uses",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "eds:requires",
+      "@type": "@id"
+    },
+    "relatesTo": {
+      "@id": "eds:relatesTo",
+      "@type": "@id"
+    },
+    "from": {
+      "@id": "eds:from",
+      "@type": "@id"
+    },
+    "to": {
+      "@id": "eds:to",
+      "@type": "@id"
+    },
+    "loadingStrategy": "eds:loadingStrategy",
+    "blockType": "eds:blockType",
+    "responsive": "eds:responsive",
+    "accessibility": "eds:accessibility",
+    "edsCompliant": "eds:edsCompliant",
+    "architecture": "eds:architecture",
+    "Entity": "eds:Entity",
+    "Operation": "eds:Operation",
+    "Component": "eds:Component"
+  },
+  "@graph": [
+    {
+      "id": "eds:EDSWebsite",
+      "type": "Entity",
+      "name": "EDS Website",
+      "description": "Adobe Experience Manager Edge Delivery Services website implementation",
+      "attributes": {
+        "url": "https://main--context-studio-lab--dhineshprasadchidamb.hlx.page/",
+        "version": "1.0.0",
+        "edsCompliant": true,
+        "architecture": "Edge Delivery Services"
+      },
+      "features": [
+        "Server-side rendering",
+        "Progressive enhancement",
+        "Block-based architecture",
+        "Responsive design",
+        "Performance optimized",
+        "SEO friendly",
+        "Accessibility compliant"
+      ],
+      "relatesTo": [
+        "eds:CoreScripts",
+        "eds:CoreStyles",
+        "eds:BlockSystem",
+        "eds:Configuration"
+      ]
+    },
+    {
+      "id": "eds:CoreScripts",
+      "type": "Component",
+      "name": "Core Scripts",
+      "description": "Essential JavaScript files for EDS functionality",
+      "relatesTo": [
+        "eds:AEMScript",
+        "eds:MainScript",
+        "eds:DelayedScript"
+      ]
+    },
+    {
+      "id": "eds:AEMScript",
+      "type": "Entity",
+      "name": "AEM Core Script",
+      "description": "Core AEM Edge Delivery Services functionality including block loading, decoration, and LCP optimization",
+      "attributes": {
+        "path": "scripts/aem.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "eager",
+        "edsCompliant": true
+      },
+      "purpose": "Provides core EDS functionality for block loading, decoration, and performance optimization",
+      "features": [
+        "Block auto-decoration",
+        "Lazy loading support",
+        "LCP image optimization",
+        "Section decoration",
+        "Template loading",
+        "Fragment support",
+        "Performance monitoring"
+      ]
+    },
+    {
+      "id": "eds:MainScript",
+      "type": "Entity",
+      "name": "Main Scripts",
+      "description": "Website-specific initialization and configuration scripts",
+      "attributes": {
+        "path": "scripts/scripts.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "eager",
+        "edsCompliant": true
+      },
+      "purpose": "Handles website initialization, block loading, and custom functionality",
+      "features": [
+        "Auto-block configuration",
+        "Block decoration",
+        "Section metadata handling",
+        "Custom block loading",
+        "Event handling"
+      ],
+      "relatesTo": [
+        "eds:AEMScript"
+      ]
+    },
+    {
+      "id": "eds:DelayedScript",
+      "type": "Entity",
+      "name": "Delayed Scripts",
+      "description": "Non-critical scripts loaded after page interaction for performance optimization",
+      "attributes": {
+        "path": "scripts/delayed.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "delayed",
+        "edsCompliant": true
+      },
+      "purpose": "Loads analytics, tracking, and other non-critical functionality after user interaction",
+      "features": [
+        "Deferred loading",
+        "Analytics integration",
+        "Third-party script loading",
+        "Performance optimization"
+      ],
+      "relatesTo": [
+        "eds:AEMScript",
+        "eds:MainScript"
+      ]
+    },
+    {
+      "id": "eds:CoreStyles",
+      "type": "Entity",
+      "name": "Core Styles",
+      "description": "Global CSS styles and design system for the EDS website",
+      "attributes": {
+        "path": "styles/styles.css",
+        "fileType": "CSS",
+        "responsive": true,
+        "accessibility": "WCAG 2.1 AA compliant",
+        "edsCompliant": true
+      },
+      "purpose": "Provides global styles, CSS variables, typography, and responsive design foundation",
+      "features": [
+        "CSS custom properties",
+        "Responsive typography",
+        "Mobile-first design",
+        "Accessibility styles",
+        "Performance optimized",
+        "Block-agnostic styles"
+      ]
+    },
+    {
+      "id": "eds:BlockSystem",
+      "type": "Component",
+      "name": "Block System",
+      "description": "Modular block-based component architecture",
+      "relatesTo": [
+        "eds:HeaderBlock",
+        "eds:HeroBlock",
+        "eds:FeaturesBlock",
+        "eds:FooterBlock"
+      ]
+    },
+    {
+      "id": "eds:HeaderBlock",
+      "type": "Entity",
+      "name": "Header Block",
+      "description": "Website header with navigation and branding",
+      "attributes": {
+        "path": "blocks/header/",
+        "blockType": "structural",
+        "fileType": "JavaScript + CSS",
+        "responsive": true,
+        "accessibility": "Keyboard navigation, ARIA labels, focus management",
+        "edsCompliant": true
+      },
+      "purpose": "Provides site-wide navigation, branding, and mobile menu functionality",
+      "features": [
+        "Responsive navigation",
+        "Mobile hamburger menu",
+        "Sticky header support",
+        "Accessibility compliant",
+        "Brand logo display",
+        "Multi-level navigation"
+      ],
+      "relatesTo": [
+        "eds:HeaderScript",
+        "eds:HeaderStyle"
+      ]
+    },
+    {
+      "id": "eds:HeaderScript",
+      "type": "Entity",
+      "name": "Header Script",
+      "description": "JavaScript functionality for header block",
+      "attributes": {
+        "path": "blocks/header/header.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "eager",
+        "edsCompliant": true
+      },
+      "purpose": "Handles header interactivity, mobile menu, and navigation behavior",
+      "features": [
+        "Mobile menu toggle",
+        "Navigation state management",
+        "Scroll behavior",
+        "Event handling"
+      ],
+      "relatesTo": [
+        "eds:AEMScript"
+      ]
+    },
+    {
+      "id": "eds:HeaderStyle",
+      "type": "Entity",
+      "name": "Header Styles",
+      "description": "CSS styles for header block",
+      "attributes": {
+        "path": "blocks/header/header.css",
+        "fileType": "CSS",
+        "responsive": true,
+        "accessibility": "High contrast support, focus indicators",
+        "edsCompliant": true
+      },
+      "purpose": "Styles header layout, navigation, and responsive behavior"
+    },
+    {
+      "id": "eds:HeroBlock",
+      "type": "Entity",
+      "name": "Hero Block",
+      "description": "Large hero section with headline, description, and call-to-action",
+      "attributes": {
+        "path": "blocks/hero/",
+        "blockType": "content",
+        "fileType": "JavaScript + CSS",
+        "responsive": true,
+        "accessibility": "Alt text support, semantic HTML, keyboard accessible",
+        "edsCompliant": true
+      },
+      "purpose": "Displays prominent hero content with imagery and CTAs",
+      "features": [
+        "Large format imagery",
+        "Headline and description",
+        "Call-to-action buttons",
+        "Responsive layout",
+        "LCP optimized",
+        "Background image support"
+      ],
+      "relatesTo": [
+        "eds:HeroScript",
+        "eds:HeroStyle"
+      ]
+    },
+    {
+      "id": "eds:HeroScript",
+      "type": "Entity",
+      "name": "Hero Script",
+      "description": "JavaScript functionality for hero block",
+      "attributes": {
+        "path": "blocks/hero/hero.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "eager",
+        "edsCompliant": true
+      },
+      "purpose": "Handles hero block decoration and image optimization",
+      "features": [
+        "Image lazy loading",
+        "Picture element generation",
+        "Responsive images",
+        "LCP optimization"
+      ],
+      "relatesTo": [
+        "eds:AEMScript"
+      ]
+    },
+    {
+      "id": "eds:HeroStyle",
+      "type": "Entity",
+      "name": "Hero Styles",
+      "description": "CSS styles for hero block",
+      "attributes": {
+        "path": "blocks/hero/hero.css",
+        "fileType": "CSS",
+        "responsive": true,
+        "accessibility": "Contrast ratios, readable typography",
+        "edsCompliant": true
+      },
+      "purpose": "Styles hero layout, typography, and responsive behavior"
+    },
+    {
+      "id": "eds:FeaturesBlock",
+      "type": "Entity",
+      "name": "Features Block",
+      "description": "Grid-based features showcase with icons and descriptions",
+      "attributes": {
+        "path": "blocks/features/",
+        "blockType": "content",
+        "fileType": "JavaScript + CSS",
+        "responsive": true,
+        "accessibility": "Semantic markup, screen reader friendly",
+        "edsCompliant": true
+      },
+      "purpose": "Displays product or service features in a grid layout",
+      "features": [
+        "Grid layout",
+        "Icon support",
+        "Feature cards",
+        "Responsive columns",
+        "Flexible content",
+        "Visual hierarchy"
+      ],
+      "relatesTo": [
+        "eds:FeaturesScript",
+        "eds:FeaturesStyle"
+      ]
+    },
+    {
+      "id": "eds:FeaturesScript",
+      "type": "Entity",
+      "name": "Features Script",
+      "description": "JavaScript functionality for features block",
+      "attributes": {
+        "path": "blocks/features/features.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "lazy",
+        "edsCompliant": true
+      },
+      "purpose": "Handles features block decoration and layout",
+      "features": [
+        "Dynamic grid generation",
+        "Icon handling",
+        "Content formatting"
+      ],
+      "relatesTo": [
+        "eds:AEMScript"
+      ]
+    },
+    {
+      "id": "eds:FeaturesStyle",
+      "type": "Entity",
+      "name": "Features Styles",
+      "description": "CSS styles for features block",
+      "attributes": {
+        "path": "blocks/features/features.css",
+        "fileType": "CSS",
+        "responsive": true,
+        "accessibility": "Readable text, proper spacing",
+        "edsCompliant": true
+      },
+      "purpose": "Styles features grid, cards, and responsive layout"
+    },
+    {
+      "id": "eds:FooterBlock",
+      "type": "Entity",
+      "name": "Footer Block",
+      "description": "Website footer with links, copyright, and additional information",
+      "attributes": {
+        "path": "blocks/footer/",
+        "blockType": "structural",
+        "fileType": "JavaScript + CSS",
+        "responsive": true,
+        "accessibility": "Keyboard navigation, semantic structure",
+        "edsCompliant": true
+      },
+      "purpose": "Provides site-wide footer with navigation, legal, and contact information",
+      "features": [
+        "Multi-column layout",
+        "Footer navigation",
+        "Social media links",
+        "Copyright information",
+        "Responsive design",
+        "Accessibility compliant"
+      ],
+      "relatesTo": [
+        "eds:FooterScript",
+        "eds:FooterStyle"
+      ]
+    },
+    {
+      "id": "eds:FooterScript",
+      "type": "Entity",
+      "name": "Footer Script",
+      "description": "JavaScript functionality for footer block",
+      "attributes": {
+        "path": "blocks/footer/footer.js",
+        "fileType": "JavaScript",
+        "loadingStrategy": "lazy",
+        "edsCompliant": true
+      },
+      "purpose": "Handles footer decoration and link management",
+      "features": [
+        "Link decoration",
+        "Column layout",
+        "Dynamic content"
+      ],
+      "relatesTo": [
+        "eds:AEMScript"
+      ]
+    },
+    {
+      "id": "eds:FooterStyle",
+      "type": "Entity",
+      "name": "Footer Styles",
+      "description": "CSS styles for footer block",
+      "attributes": {
+        "path": "blocks/footer/footer.css",
+        "fileType": "CSS",
+        "responsive": true,
+        "accessibility": "Link contrast, focus indicators",
+        "edsCompliant": true
+      },
+      "purpose": "Styles footer layout, links, and responsive behavior"
+    },
+    {
+      "id": "eds:Configuration",
+      "type": "Component",
+      "name": "Configuration Files",
+      "description": "EDS configuration and metadata files",
+      "relatesTo": [
+        "eds:FstabConfig",
+        "eds:HeadMetadata"
+      ]
+    },
+    {
+      "id": "eds:FstabConfig",
+      "type": "Entity",
+      "name": "Fstab Configuration",
+      "description": "File system table configuration for content sources",
+      "attributes": {
+        "path": "fstab.yaml",
+        "fileType": "YAML",
+        "edsCompliant": true
+      },
+      "purpose": "Configures content source mappings for EDS",
+      "features": [
+        "Content source mapping",
+        "SharePoint integration",
+        "Google Drive support",
+        "Mount point configuration"
+      ]
+    },
+    {
+      "id": "eds:HeadMetadata",
+      "type": "Entity",
+      "name": "Head Metadata",
+      "description": "HTML head metadata and resource hints",
+      "attributes": {
+        "path": "head.html",
+        "fileType": "HTML",
+        "edsCompliant": true
+      },
+      "purpose": "Defines global metadata, SEO tags, and resource preloading",
+      "features": [
+        "Meta tags",
+        "SEO optimization",
+        "Resource hints",
+        "Preconnect directives",
+        "Favicon configuration",
+        "Open Graph tags"
+      ]
+    },
+    {
+      "id": "eds:DocumentationSet",
+      "type": "Component",
+      "name": "Documentation",
+      "description": "EDS migration and implementation documentation",
+      "relatesTo": [
+        "eds:MigrationGuide",
+        "eds:ReadmeEDS",
+        "eds:ConversionSummary"
+      ]
+    },
+    {
+      "id": "eds:MigrationGuide",
+      "type": "Entity",
+      "name": "EDS Migration Guide",
+      "description": "Comprehensive guide for migrating to Edge Delivery Services",
+      "attributes": {
+        "path": "EDS-MIGRATION-GUIDE.md",
+        "fileType": "Markdown"
+      },
+      "purpose": "Documents the migration process, architecture decisions, and implementation details",
+      "features": [
+        "Migration steps",
+        "Architecture overview",
+        "Block development guide",
+        "Best practices",
+        "Troubleshooting"
+      ]
+    },
+    {
+      "id": "eds:ReadmeEDS",
+      "type": "Entity",
+      "name": "EDS README",
+      "description": "Quick start guide and overview for EDS implementation",
+      "attributes": {
+        "path": "README-EDS.md",
+        "fileType": "Markdown"
+      },
+      "purpose": "Provides quick reference and getting started information",
+      "features": [
+        "Project overview",
+        "Setup instructions",
+        "Development workflow",
+        "Deployment process"
+      ]
+    },
+    {
+      "id": "eds:ConversionSummary",
+      "type": "Entity",
+      "name": "EDS Conversion Summary",
+      "description": "Summary of conversion from traditional web to EDS architecture",
+      "attributes": {
+        "path": "EDS-CONVERSION-SUMMARY.md",
+        "fileType": "Markdown"
+      },
+      "purpose": "Documents conversion decisions, changes made, and outcomes",
+      "features": [
+        "Conversion overview",
+        "Changes summary",
+        "Performance improvements",
+        "Next steps"
+      ]
+    },
+    {
+      "id": "eds:Implements",
+      "type": "Operation",
+      "name": "Implements",
+      "description": "Indicates that one component implements or contains another component",
+      "from": "eds:EDSWebsite",
+      "to": "eds:CoreScripts"
+    },
+    {
+      "id": "eds:Uses",
+      "type": "Operation",
+      "name": "Uses",
+      "description": "Indicates that one script uses functionality from another script",
+      "from": "eds:MainScript",
+      "to": "eds:AEMScript"
+    },
+    {
+      "id": "eds:DependsOn",
+      "type": "Operation",
+      "name": "DependsOn",
+      "description": "Indicates that one component depends on another for functionality",
+      "from": "eds:HeaderBlock",
+      "to": "eds:HeaderScript"
+    }
+  ]
+}
