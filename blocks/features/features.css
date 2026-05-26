@@ -1,5 +1,33 @@
+/* Features Block - Context Studio Lab */
+.features-container {
+  background: #f7fafc;
+  padding: 0;
+}
+
+.features-container .features-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
 .features {
-  background: var(--light);
+  background: #f7fafc;
+}
+
+.features .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features .section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.features .section-subtitle {
+  font-size: 1.25rem;
+  color: #718096;
 }
 
 .features-grid {
@@ -9,32 +37,35 @@
 }
 
 .feature-card {
-  background: var(--white);
+  background: white;
   padding: 2rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .feature-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--dark);
+  color: #1a1a2e;
+  font-weight: 700;
 }
 
 .feature-description {
-  color: var(--gray-dark);
+  color: #4a5568;
   margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .feature-list {
@@ -47,33 +78,48 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: var(--gray-dark);
+  color: #4a5568;
 }
 
 .feature-list li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--success-color);
+  color: #51cf66;
   font-weight: 700;
 }
 
 .feature-link {
-  color: var(--primary-color);
+  color: #0066ff;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: gap var(--transition-fast);
+  transition: gap 0.2s ease;
+  text-decoration: none;
 }
 
 .feature-link:hover {
   gap: 1rem;
 }
 
-@media (width <= 600px) {
+.feature-link::after {
+  content: '→';
+}
+
+@media (max-width: 968px) {
+  .features .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .features-container .features-wrapper {
+    padding: 4rem 1rem;
   }
 }
 

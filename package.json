@@ -1,39 +1,30 @@
 {
-  "name": "@adobe/context-studio-lab",
+  "name": "@adobe/aem-boilerplate",
   "private": true,
-  "version": "1.0.0",
-  "description": "Context Studio Lab - EDS Project",
+  "version": "1.3.0",
+  "description": "Starter project for Adobe Helix",
   "scripts": {
-    "start": "npx @adobe/aem-cli up",
-    "dev": "npx @adobe/aem-cli up",
-    "up": "npx @adobe/aem-cli up",
-    "serve": "npx http-server -p 3000 -o",
-    "lint:js": "eslint . --ext .json,.js,.mjs",
+    "lint:js": "eslint .",
     "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
-    "prepare": "husky"
+    "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/context-studio/context-studio-lab.git"
+    "url": "git+https://github.com/adobe/aem-boilerplate.git"
   },
-  "author": "Context Studio",
+  "author": "Adobe",
   "license": "Apache License 2.0",
   "bugs": {
-    "url": "https://github.com/context-studio/context-studio-lab/issues"
+    "url": "https://github.com/adobe/aem-boilerplate/issues"
   },
-  "homepage": "https://github.com/context-studio/context-studio-lab#readme",
+  "homepage": "https://github.com/adobe/aem-boilerplate#readme",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.28.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-xwalk": "github:adobe-rnd/eslint-plugin-xwalk",
-    "husky": "^9.1.1",
-    "merge-json-cli": "^1.0.4",
-    "npm-run-all": "^4.1.5",
-    "stylelint": "^17.12.0",
-    "stylelint-config-standard": "^40.0.0"
+    "@babel/eslint-parser": "7.29.7",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.32.0",
+    "stylelint": "17.12.0",
+    "stylelint-config-standard": "40.0.0"
   }
 }

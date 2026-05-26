@@ -1,0 +1,126 @@
+/* Demo Block - Context Studio Lab */
+.demo-container {
+  background: #f7fafc;
+  padding: 0;
+}
+
+.demo-container .demo-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.demo {
+  background: #f7fafc;
+}
+
+.demo .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.demo .section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.demo .section-subtitle {
+  font-size: 1.25rem;
+  color: #718096;
+}
+
+.demo-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.demo-video {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-placeholder {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.video-placeholder:hover .play-button {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.demo-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.demo-feature {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.demo-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.demo-text h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.demo-text p {
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .demo .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .demo-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-container .demo-wrapper {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Made with Bob */

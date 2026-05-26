@@ -1,44 +1,20 @@
 import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../fragment/fragment.js';
 
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
+  // load footer as fragment
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta).pathname : '/footer';
-  const resp = await fetch(`${footerPath}.plain.html`);
+  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const fragment = await loadFragment(footerPath);
 
-  if (resp.ok) {
-    const html = await resp.text();
+  // decorate footer DOM
+  block.textContent = '';
+  const footer = document.createElement('div');
+  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
-    // decorate footer DOM
-    const footer = document.createElement('div');
-    footer.innerHTML = html;
-
-    const footerContent = footer.querySelector('.footer-content');
-    if (footerContent) {
-      footerContent.className = 'footer-content';
-    }
-
-    const footerBrand = footer.querySelector('.footer-brand');
-    if (footerBrand) {
-      footerBrand.className = 'footer-brand';
-    }
-
-    const footerLinks = footer.querySelector('.footer-links');
-    if (footerLinks) {
-      footerLinks.className = 'footer-links';
-    }
-
-    const footerBottom = footer.querySelector('.footer-bottom');
-    if (footerBottom) {
-      footerBottom.className = 'footer-bottom';
-    }
-
-    block.textContent = '';
-    block.append(footer);
-  }
+  block.append(footer);
 }
-
-// Made with Bob

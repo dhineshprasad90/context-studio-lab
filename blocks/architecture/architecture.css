@@ -1,0 +1,145 @@
+/* Architecture Block - Context Studio Lab */
+.architecture-container {
+  background: #1a1a2e;
+  color: white;
+  padding: 0;
+}
+
+.architecture-container .architecture-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.architecture {
+  background: #1a1a2e;
+  color: white;
+}
+
+.architecture .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.architecture .section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.architecture .section-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e0;
+}
+
+.architecture-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.architecture-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.arch-layer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.arch-layer:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.layer-number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.layer-content h4 {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.layer-content p {
+  color: #cbd5e0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.architecture-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.stat-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stat-card li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e0;
+}
+
+.stat-card li:last-child {
+  border-bottom: none;
+}
+
+.stat-card strong {
+  color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 968px) {
+  .architecture .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .architecture-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .architecture-container .architecture-wrapper {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Made with Bob */

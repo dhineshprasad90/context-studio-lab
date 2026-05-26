@@ -16,5 +16,3 @@ export default function decorate(block) {
     });
   });
 }
-
-// Made with Bob
