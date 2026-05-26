@@ -18,7 +18,7 @@ The original [`fstab.yaml`](fstab.yaml) pointed to:
 ```yaml
 mountpoints:
   /:
-    url: "https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xwalk/main"
+    url: " url: https://author-p9198-e332504.adobeaemcloud.com/bin/franklin.delivery/dhineshprasad90/context-studio-lab/main"
     type: "markup"
     suffix: ".html"
 ```
