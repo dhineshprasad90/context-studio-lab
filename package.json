@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "Context Studio Lab - EDS Project",
   "scripts": {
+    "start": "npx @adobe/aem-cli up",
+    "dev": "npx @adobe/aem-cli up",
+    "up": "npx @adobe/aem-cli up",
+    "serve": "npx http-server -p 3000 -o",
     "lint:js": "eslint . --ext .json,.js,.mjs",
     "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
