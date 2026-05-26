@@ -1,5 +1,2 @@
 mountpoints:
-  /:
-    url: "https://author-p9198-e332504.adobeaemcloud.com/bin/franklin.delivery/dhineshprasad90/context-studio-lab/main"
-    type: "markup"
-    suffix: ".html"
+  /: https://drive.google.com/drive/folders/1R0I4IOgRmPbxsjYaccrX52_sZ2M3IaGs
